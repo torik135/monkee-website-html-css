@@ -291,6 +291,39 @@ h4 {
 
 /* LIVE END */
 
+/* LIVE SPORTS */
+.live-sports {
+	background: url('../img/img.jpg') no-repeat center center / cover;
+	height: 800px;
+	position: relative;
+	box-shadow: inset 10px 0px 150px 95px #000;
+}
+
+.live-sports-content {
+	position: absolute;
+	top: 160px;
+	left: 100px;
+	max-width: 550px;
+}
+
+.live-sports-logos {
+	width: 300px;
+	margin-top: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+}
+
+.live-sports-logos > div {
+	border: 1px solid white;
+	border-radius: 50%;
+	background: white;
+	clip-path: circle(30% at 50% 50%);
+}
+
+/* LIVE SPORTS END */
+
 /* MEDIA QUERIES */
 @media(max-width: 1100px){
 	.categories .covers {
@@ -347,6 +380,13 @@ h4 {
 
 	.live-border {
 		padding: 30px 10px;
+	}
+
+	.live-sports-content {
+		top: 30px;
+		left: 30px;
+		padding: 20px;
+		margin-top: 70px;
 	}
 
 }
