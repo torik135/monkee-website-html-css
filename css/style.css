@@ -38,7 +38,7 @@ h4 {
 	color: yellow;
 	font-size: 12px;
 	text-transform: uppercase;
-	z-index: 10;
+	z-index: 5;
 }
 
 .btn {
@@ -72,8 +72,14 @@ h4 {
 	opacity: 0.7;
 }
 
+.btn-dark {
+	background: #333;
+	color: #fff;
+}
+
 .login-btn {
 	z-index: 10;
+	position: relative;
 }
 
 .legal-text {
@@ -366,6 +372,77 @@ h4 {
 }
 
 /* FOOTER END */
+
+/* MODAL */
+.modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 6;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,0.5);
+}
+
+.modal-box {
+	margin: 10% auto;
+	width: 400px;
+	background: #fff;
+	color: #333;
+	position: relative;
+}
+
+.modal-body {
+	padding: 50px;
+}
+
+.modal-body h3{
+	font-weight: bold;
+}
+
+.modal .close {
+	position: absolute;
+	cursor: pointer;
+	border: 2px solid white;
+	border-radius: 5px;
+	background: #333;
+	top: 5px;
+	right: 5px;
+	padding: 2px 5px;
+}
+
+.modal .modal-footer {
+	background: #f7f7f9;
+	color: #333;
+	padding: 20px 0;
+	border-top: #eee 2px solid; 
+	text-align: center;
+}
+
+.modal .modal-footer a {
+	color: steelblue;
+}
+
+/* FORM */
+.form-control {
+	padding: 20px 0;
+}
+
+.form-control label {
+	display: block;
+	text-transform: uppercase;
+}
+
+.form-control input {
+	width: 100%;
+	border: 2px #ccc solid;
+	border-radius: 5px;
+	height: 50px;
+	padding: 5px;
+}
+
+/* MODAL END */
 
 /* MEDIA QUERIES */
 @media(max-width: 1100px){
