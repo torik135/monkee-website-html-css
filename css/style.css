@@ -36,7 +36,7 @@ h3 {
 
 h4 {
 	color: yellow;
-	font-size: 13px;
+	font-size: 12px;
 	text-transform: uppercase;
 	z-index: 10;
 }
@@ -90,6 +90,17 @@ h4 {
 	text-decoration: underline;
 }
 
+.text-xl {
+	font-size: 70px;
+	font-weight: bold;
+}
+
+.sub-text {
+	max-width: 850px;
+	margin-bottom: 10px;
+	font-size: 24px; 
+}
+
 /* HEADER */
 
 .header {
@@ -107,6 +118,8 @@ h4 {
 	display: flex;;
 	justify-content: flex-end;
 	padding: 20px 40px;
+	z-index: 10;
+	position: relative;
 }
 
 .header nav .login-btn {
@@ -135,6 +148,22 @@ h4 {
 .header .header-text-2 {
 	font-size: 18px;
 	margin: 25px 0; 
+}
+
+.header::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 180px;
+	z-index: 1;
+	background: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 0.6) 15.58%,
+		rgba(0, 0, 0, 0.128) 60.62%,
+		rgba(0, 0, 0, 8e-5) 100%
+		);
 }
 /* HEADER END */
 
@@ -170,7 +199,80 @@ h4 {
 }
 /* SUB HEADER END */
 
+/* CATEGRIES */
+
+.categories {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 90px 40px;
+}
+
+.categories .covers {
+	display: grid;
+	gap: 45px;
+	grid-template-columns: repeat(4, 1fr);
+	margin-top: 40px;
+}
+
+.categories .covers > div {
+	height: 500px;
+	width: 300px;
+	position: relative;
+}
+
+.categories .cover-grad {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		11deg,
+		rgba(0, 0, 0, 0.6) 4.58%,
+		rgba(0, 0, 0, 0) 69.62%
+		),
+	linear-gradient(
+		24.5deg,
+		rgba(0, 0, 0, 0.2) 4.71%,
+		rgba(0, 0, 0, 0)71.49%
+		);
+}
+
+.categories .cover-text {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	text-align: left;
+}
+
+.categories .cover-1 {
+	background: url('../img/img.jpg') no-repeat center center / cover;
+}
+
+.categories .cover-2 {
+	background: url('../img/img.jpg') no-repeat center center / cover;
+}
+
+.categories .cover-3 {
+	background: url('../img/img.jpg') no-repeat center center / cover;
+}
+
+.categories .cover-4 {
+	background: url('../img/img.jpg') no-repeat center center / cover;
+}
+
+/* CATEGRIES END */
+
 /* MEDIA QUERIES */
+@media(max-width: 1100px){
+	.categories .covers {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
 @media(max-width: 768px){
 	.header .logo{
 		width: 200px;
@@ -203,6 +305,19 @@ h4 {
 
 	.sub-header > div:last-of-type {
 		justify-self: center;
+	}
+
+	.text-xl {
+		line-height: 1.4;
+		font-size: 50px;
+	}
+
+	.sub-text {
+		font-size: 20px;
+	}
+
+	.categories .covers {
+		grid-template-columns: 1fr;
 	}
 
 }
