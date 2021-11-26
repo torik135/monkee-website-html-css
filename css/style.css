@@ -391,6 +391,7 @@ h4 {
 	background: #fff;
 	color: #333;
 	position: relative;
+	animation: movedown 0.5s;
 }
 
 .modal-body {
@@ -515,3 +516,14 @@ h4 {
 
 }
 /* MEDIA QUERIES END*/
+
+/* ANIMATION */
+@keyframes movedown {
+	from {
+		top: -100px;
+		}
+	to {
+		top: 0px;
+		}
+}
+/* ANIMATION END */
