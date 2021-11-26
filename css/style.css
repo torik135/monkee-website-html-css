@@ -120,6 +120,12 @@ h4 {
 	box-shadow: 0px 0px 150px 15px #000;
 }
 
+.header .logo:hover {
+	animation: colorrotate 0.5s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
 .header nav {
 	display: flex;;
 	justify-content: flex-end;
@@ -525,5 +531,14 @@ h4 {
 	to {
 		top: 0px;
 		}
+}
+
+@keyframes colorrotate {
+	from{
+		filter: hue-rotate(0deg);
+	}
+	to{
+		filter: hue-rotate(360deg);
+	}
 }
 /* ANIMATION END */
